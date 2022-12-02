@@ -58,7 +58,7 @@ garagem_tamanho VARCHAR(50) NOT NULL,
 numerocarro INT NOT NULL
 );
 
--- IMPORT WIZARD!
+
 
 -- 5)
 DELETE FROM garagem
@@ -76,7 +76,6 @@ RIGHT OUTER JOIN garagem_info ON banheiro.toalha_qnt = garagem_info.garagem_carr
 WHERE banheiro.toalha_qnt = '3' ;
 
 
--- MUDAR O JOIN OU A TABELA DO SELECT ABAIXO
 SELECT cozinha.cozinha_fogao, sala.sala_ID
 FROM cozinha
 LEFT JOIN sala ON cozinha.cozinha_ID = sala.sala_ID;
