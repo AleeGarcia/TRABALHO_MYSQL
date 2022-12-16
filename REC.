@@ -1,0 +1,15 @@
+CREATE TABLE mesa (
+mesa_ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+mesa_tamanho VARCHAR(50) NOT NULL,
+mesa_assentos VARCHAR(50),
+talher_ID int not null
+);
+
+CREATE TABLE talher (
+talher_ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+talher_garfo VARCHAR(50) NOT NULL,
+talher_faca VARCHAR(50) NOT NULL
+);
+
+SELECT mesa.talher_ID FROM talher
+INNER JOIN mesa ON mesa.talher_ID = talher.talher_ID;
